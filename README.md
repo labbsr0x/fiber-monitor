@@ -72,6 +72,9 @@ You must register the metrics middleware to enable metric collection.
 Metrics Middleware can be added to a router using `fiber.New().Use()`:
 
 ```go
+    import (
+	fibermonitor "github.com/labbsr0x/fiber-monitor"
+    )
     // Creates fiber-monitor instance
     monitor, err := fibermonitor.New("v1.0.0", fibermonitor.DefaultErrorMessageKey, fibermonitor.DefaultBuckets)
     if err != nil {
